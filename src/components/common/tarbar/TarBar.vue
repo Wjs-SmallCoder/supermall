@@ -17,7 +17,9 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #f6f6f6;
+    /*background-color: #f6f6f6;*/
+    background: pink;
+    color: #fff;
     box-shadow: 1px -1px 1px rgba(100,100,100,0.2);
   }
 
