@@ -19,16 +19,14 @@
 </template>
 
 <script>
-  import TarBar from "components/common/tarbar/TarBar";
-  import TarBarItem from "components/common/tarbar/TarBarItem";
+  import {TarBar,TarBarItem} from "components/common/tarbar/index"
 
   export default {
     name: 'App',
     components: {
       TarBar,
       TarBarItem
-    },
-
+    }
   }
 </script>
 

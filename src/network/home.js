@@ -1,3 +1,5 @@
+// 负责home.vue 文件的网络请求
+
 import {request} from "./request"
 
 export function gethomedata() {
