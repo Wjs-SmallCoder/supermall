@@ -1,3 +1,4 @@
+<!-- 页面顶部导航 -->
 <template>
     <div class="nav-bar">
       <div id="left">

@@ -1,5 +1,7 @@
 <template>
     <div id="hy-swiper">
+<!--      touchstart touchmove touchend 是js事件 在移动端使用-->
+<!--      用@ 来绑定触摸事件-->
       <div class="swiper" @touchstart="touchStart" @touchmove="touchMove" @touchend="touchEnd">
         <slot></slot>
       </div>

@@ -7,3 +7,9 @@ export function gethomedata() {
     url: '/home/multidata'
   })
 }
+
+export function gethomelist() {
+  return request({
+    url: 'home/multidata'
+  })
+}

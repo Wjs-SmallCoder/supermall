@@ -7,6 +7,7 @@ import router from './router'
 Vue.config.productionTip = false
 
 new Vue({
+  //将路由导入
   router,
   render: h => h(App)
 }).$mount('#app')
