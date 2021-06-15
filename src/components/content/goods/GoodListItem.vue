@@ -22,6 +22,11 @@
               return {}
             }
           }
+        },
+        methods: {
+          imageLoad() {
+            this.$bus.$emit('imageLoad')
+          }
         }
     }
 </script>
