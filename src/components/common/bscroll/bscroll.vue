@@ -32,8 +32,14 @@
         methods: {
           ScrollTo(x,y,time=300) {
             // scrollTo(x 轴的值，y 轴的值，返回动画时间)
-            this.scroll.scrollTo(0,0,time)
+            // 判断this.scroll 对象是否存在
+            this.scroll && this.scroll.scrollTo(0,0,time)
           },
+          // 将当前的scroll.y 的值传递出去，便于在组件切换时能够放回上一次组件的位置
+          getScrollY() {
+            //scroll.y 当前组件的y 值
+            return this.scroll ? this.scroll.y : 0
+          }
           // finishPullUp() {
           //   // 调用finishPullUp 可以执行多次上拉
           //   this.scroll.finishPullUp()
@@ -56,8 +62,12 @@
 
           setTimeout(() => {
             this.scroll = new BScroll(this.$refs.wrapper,{
+              // 让div 等其他标签能够触发点击事件
+              // 不添加则BScroll 对象里面除button 标签以外都不能触发click 事件
               click: true,
+              // probeType 是否监听滚动的position 值
               probeType: this.probeType,
+              // pullUpLoad 监听上拉动作
               pullUpLoad: this.pullUpLoad
             })
             // 监听scroll 对象的scroll 事件
@@ -75,8 +85,10 @@
               this.scroll.finishPullUp()
             })
 
+            // 刷新，使图片加载后的高度被计算
+            // 会调用一次pullingUp
             this.scroll.refresh()
-          },200)
+          },400)
 
         },
         // 由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。

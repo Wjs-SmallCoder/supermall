@@ -29,6 +29,7 @@
             this.currentIndex = index;
 
             this.$emit('TabClick',index)
+
           }
       }
     }

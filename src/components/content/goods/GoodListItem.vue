@@ -24,9 +24,10 @@
           }
         },
         methods: {
-          imageLoad() {
-            this.$bus.$emit('imageLoad')
-          }
+          // 通过Vue 原型添加的$bus 能够获取到这个事件
+          // imageLoad() {
+          //   this.$bus.$emit('imageLoad')
+          // }
         }
     }
 </script>

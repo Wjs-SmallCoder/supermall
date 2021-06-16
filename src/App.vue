@@ -1,7 +1,10 @@
 <template>
   <div id="app">
 <!--  router-view 用来展示vue 组件页面  -->
-    <router-view/>
+<!--    keep-alive 保证vue-router 刷新时不被刷新-->
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
 <!--    tar-bar 导航组件-->
     <tar-bar>
 <!--      tar-bar-item 导航内部组件-->
